@@ -1,0 +1,38 @@
+NEXUS — guía inicial desde celular
+
+IMPORTANTE
+Este paquete es una primera versión. Incluye diseño adaptable, buscador local, formulario de demostración y estructura para Firebase. Registro, inicio de sesión y publicaciones compartidas se activan después de configurar Firebase. Galería, chat, comentarios, videos y panel de administración todavía necesitan desarrollo adicional y reglas de seguridad antes de abrirlos al público.
+
+1) PUBLICAR LA VISTA PREVIA GRATIS
+- Entra a https://github.com/ desde Chrome y crea una cuenta.
+- Crea un repositorio nuevo llamado nexus-web.
+- Sube index.html, styles.css y app.js.
+- En Settings > Pages, elige Deploy from a branch, rama main y carpeta /(root).
+- Guarda y espera a que GitHub Pages muestre el enlace público.
+- No publiques claves privadas, contraseñas ni datos personales.
+
+2) CONECTAR FIREBASE (para cuentas y publicaciones)
+- En https://console.firebase.google.com/ crea un proyecto.
+- Agrega una aplicación web (icono </>).
+- Copia la configuración web que Firebase muestra.
+- En app.js reemplaza los valores PEGA_AQUI / TU-PROYECTO / TU_SENDER_ID / TU_APP_ID.
+- En Authentication > Sign-in method habilita Email/Password.
+- En Firestore Database crea la base de datos.
+- En Rules pega el contenido de firestore.rules y publica las reglas.
+- Vuelve a subir app.js a GitHub.
+
+3) SEGURIDAD
+- No uses datos reales sensibles en perfiles públicos.
+- No permitas que cualquiera se convierta en administrador. Los roles admin deben asignarse manualmente y protegerse con reglas verificadas.
+- Antes de activar chat, comentarios, fotos subidas y moderación, configura límites, reportes, bloqueo y reglas de acceso.
+- No publiques números de teléfono, direcciones, escuela ni ubicación.
+- Usa solo contenido e imágenes que tengas permiso para compartir.
+- Revisa los límites del plan gratuito de Firebase; pueden cambiar.
+
+4) FUNCIONES PENDIENTES DE ESTA PRIMERA VERSIÓN
+- Comentarios y chat privado en tiempo real.
+- Galería con subida segura de imágenes.
+- Perfiles editables y búsqueda de usuarios.
+- Noticias, videos y formulario real de contacto.
+- Panel de administración con rol seguro.
+Estas funciones requieren colecciones adicionales, almacenamiento y reglas de seguridad. No anuncies el sitio como red social completa hasta terminarlas y probarlas.
