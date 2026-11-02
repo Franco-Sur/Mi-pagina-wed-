@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>NEXUS | Tu mundo digital</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#">NEXUS<span>.</span></a>
+  <nav><a href="#explorar">Explorar</a><a href="#galeria">Galería</a><a href="#videos">Videos</a></nav>
+  <div class="account" id="accountArea"><button class="btn ghost" id="loginOpen">Iniciar sesión</button><button class="btn" id="registerOpen">Registrarse</button></div>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy"><span class="eyebrow">UN ESPACIO PARA DESCUBRIR</span>
+      <h1>Tu mundo.<br><span>Tu comunidad.</span></h1>
+      <p>Explora publicaciones, comparte ideas y descubre contenido nuevo en NEXUS.</p>
+      <a class="btn" href="#explorar">Explorar ahora</a>
+    </div>
+    <div class="hero-art"><div class="orb orb-a"></div><div class="orb orb-b"></div><div class="hero-card"><span>✦</span><b>Bienvenido a NEXUS</b><small>Conecta · Descubre · Comparte</small></div></div>
+  </section>
+
+  <section class="section" id="explorar">
+    <div class="section-head"><div><span class="eyebrow">COMUNIDAD</span><h2>Explorar publicaciones</h2></div>
+      <input id="searchInput" class="search" placeholder="Buscar publicaciones..." aria-label="Buscar publicaciones">
+    </div>
+    <div class="notice" id="statusNote">Modo de vista previa. Conecta Firebase para habilitar cuentas y contenido compartido.</div>
+    <div class="composer panel" id="composer">
+      <h3>Comparte algo</h3>
+      <textarea id="postText" maxlength="700" placeholder="¿Qué quieres compartir? No publiques datos personales."></textarea>
+      <div class="composer-row"><input id="postImage" type="url" placeholder="Enlace de imagen (opcional)"><button class="btn" id="publishBtn">Publicar</button></div>
+      <small>Necesitas iniciar sesión para publicar.</small>
+    </div>
+    <div id="posts" class="posts"><article class="post panel"><div class="post-meta"><b>Equipo NEXUS</b><span>Publicación de ejemplo</span></div><h3>¡Bienvenido a NEXUS!</h3><p>Este es el espacio para descubrir contenido y compartir ideas con respeto.</p><div class="post-actions"><span>♡ 0 me gusta</span><span>0 comentarios</span></div></article></div>
+  </section>
+
+  <section class="section" id="galeria"><div class="section-head"><div><span class="eyebrow">INSPIRACIÓN</span><h2>Galería</h2></div></div>
+    <div class="gallery"><div class="gallery-tile tile-one">Creatividad</div><div class="gallery-tile tile-two">Ideas</div><div class="gallery-tile tile-three">Explora</div></div>
+  </section>
+
+  <section class="section" id="videos"><div class="section-head"><div><span class="eyebrow">PARA VER</span><h2>Videos</h2></div></div>
+    <div class="panel video-panel"><div class="play">▶</div><div><b>Tu próxima sección de videos</b><p>Agrega enlaces de videos públicos y apropiados para la comunidad.</p></div></div>
+  </section>
+
+  <section class="section split" id="perfil"><div><span class="eyebrow">TU ESPACIO</span><h2>Perfil de usuario</h2><p>Cuando conectes tu cuenta podrás editar tu nombre visible y ver tus publicaciones.</p></div><div class="panel profile-card"><div class="avatar">N</div><b id="profileName">Invitado</b><span id="profileEmail">Inicia sesión para ver tu perfil.</span><button class="btn ghost" id="profileEdit">Editar perfil</button></div></section>
+
+  <section class="section split" id="contacto"><div><span class="eyebrow">HABLEMOS</span><h2>Contacto</h2><p>Envíanos una consulta. No incluyas contraseñas, direcciones ni información privada.</p></div>
+    <form class="panel contact-form" id="contactForm"><input required maxlength="60" placeholder="Asunto"><textarea required maxlength="500" placeholder="Tu mensaje"></textarea><button class="btn">Enviar mensaje</button><small id="contactStatus">El formulario de demostración no envía mensajes todavía.</small></form>
+  </section>
+
+  <section class="section admin-section" id="admin"><div><span class="eyebrow">GESTIÓN</span><h2>Panel de administración</h2><p>El acceso de administrador debe asignarse manualmente desde Firebase. Nunca se habilita desde un botón público.</p></div><div class="panel"><b>Herramientas de moderación</b><p>Revisar publicaciones denunciadas · Ocultar contenido · Gestionar usuarios.</p><small>Se activará al configurar permisos seguros en Firebase.</small></div></section>
+</main>
+<footer><a class="brand" href="#">NEXUS<span>.</span></a><p>Una comunidad construida con respeto.</p><small>Prototipo inicial · Política de privacidad y normas de comunidad pendientes de completar.</small></footer>
+
+<dialog id="authDialog"><form method="dialog" class="dialog-card" id="authForm"><button class="close" aria-label="Cerrar">×</button><span class="eyebrow">BIENVENIDO</span><h2 id="authTitle">Crear cuenta</h2><input id="authName" placeholder="Nombre visible" maxlength="30"><input id="authEmail" type="email" placeholder="Correo electrónico" required><input id="authPassword" type="password" placeholder="Contraseña (mínimo 8 caracteres)" minlength="8" required><button class="btn" id="authSubmit" type="submit">Crear cuenta</button><small id="authMessage">Usa una contraseña única. No la compartas con nadie.</small></form></dialog>
+<script type="module" src="app.js"></script>
+</body></html>
